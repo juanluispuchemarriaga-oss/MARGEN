@@ -165,7 +165,7 @@ fun MargenNavHost() {
                 ProductEditScreen(
                     productId = id,
                     onBack = { navController.popBackStack() },
-                    onSaved = { savedId, isNew ->
+                    onSaved = { savedId: Long, isNew: Boolean ->
                         if (isNew) {
                             navController.navigate(Routes.detail(savedId)) {
                                 popUpTo(Routes.EDIT) { inclusive = true }
